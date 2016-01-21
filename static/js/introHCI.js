@@ -46,14 +46,15 @@ function projectClick(e) {
 	//appending items 
 	var containingProject = $(this).closest(".project");
 	var description = $(containingProject).find(".project-description");
-	if (description.length == 0) {
-		containingProject.append("<div class='project-description'><p>Description of the Project</p></div>")
+	$(description).toggle();
+	/*if (description.length == 0) {
+		//containingProject.append("<div class='project-description'><p>Description of the Project</p></div>")
 
 	}
 	else {
 		$(".project-description").toggle();
 
-	}
+	}*/
 	
 }
 	
