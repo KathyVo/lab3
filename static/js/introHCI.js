@@ -21,13 +21,13 @@ function initializePage() {
 
 }
 
-function updateProject(e) { //FIX LATER AT
+function updateProject(e) { //
 	var projectID = $("#project").val(); 
 	$(projectID).animate({
 		width: $('#width').val()
 	});
 	var newText = $("#description").val();
-	$(projectID + ".project-description").text(newText);
+	$(projectID + " .project-description").text(newText);
 }
 
 	// Add any additional listeners here
@@ -47,11 +47,11 @@ function projectClick(e) {
 	var containingProject = $(this).closest(".project");
 	var description = $(containingProject).find(".project-description");
 	if (description.length == 0) {
-		containingProject.append("<div class = 'project-description'><p>Description of the Project</p></div>")
+		containingProject.append("<div class='project-description'><p>Description of the Project</p></div>")
 
 	}
 	else {
-		$(".project-description").fadeOut();
+		$(".project-description").toggle();
 
 	}
 	
